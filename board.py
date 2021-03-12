@@ -17,7 +17,7 @@ class Board(object):
 
 # for the Board I have created an array object of Cell, however I need to initialize it
 # def initialize helps me to put an object Cell in each [][] of the array
-# this method I need to call it in the class constructor
+# I need to call it in the class constructor
     def initializeboard(self):
         for row in range(self.rows):
             for col in range(self.cols):
