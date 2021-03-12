@@ -94,7 +94,6 @@ class Board(object):
 
 
 
-
 board = Board(10,10)
 board.initializeboard()
 board.countNeighbords()
