@@ -12,7 +12,7 @@ class Board(object):
         # I have two options for creating a matrix:
         self.board = np.ndarray((self.rows, self.cols), dtype=Cell) # it works but I dont use it
         self.matrix = [[Cell(i, j, False, False) for j in range(cols)] for i in range(rows)]
-        self.initializeboard() # use it for board. I dont use it since I'm using matrix
+        self.initializeboard() # If you use board, use this method. I dont use it since I'm using matrix
         self.generateMines()
 
 # for the Board I have created an array object of Cell, however I need to initialize it
@@ -94,9 +94,9 @@ class Board(object):
 
 
 
-board = Board(10,10)
+'''board = Board(10,10)
 board.initializeboard()
 board.countNeighbords()
 board.printMatrix()
-board.printmatrix2()
+board.printmatrix2()'''
 
