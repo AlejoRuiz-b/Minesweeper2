@@ -1,7 +1,6 @@
 from cell import Cell
 import numpy as np
 from random import randint
-import random
 
 
 class Board(object):
