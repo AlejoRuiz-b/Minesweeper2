@@ -43,7 +43,7 @@ class Board(object):
                     print(f"{self.matrix[i][j].getValue()} ", end=' ')
             print()
 
-    def printmatrix2(self):
+    def printmatrixValues(self):
         for i in range(len(self.matrix)):
             for j in range(len(self.matrix[i])):
                 print(f"{self.matrix[i][j].getValue()} ", end=' ')
@@ -91,7 +91,8 @@ class Board(object):
 
     def getmove(self, row, col):
         self.matrix[row][col].setReveled(True)
-        self.matrix.printMatrix()
+        return self.matrix[row][col].getValue()
+
 
 
 

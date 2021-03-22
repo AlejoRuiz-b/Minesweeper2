@@ -13,6 +13,14 @@ class Game(object):
                      + "===================================="
         print(welcomeStr)
 
+    def gameOver(self):
+        """ Print the Welcome message to the console """
+        welcomeStr = "===================================\n" \
+                     + "\t Game over Mother F***ker\n" \
+                     + "===================================="
+        print(welcomeStr)
+        self.board.printmatrixValues()
+
     def test(self):
         print("hey")
         self.mainDisplay()
@@ -23,16 +31,27 @@ class Game(object):
     def askmove(self):
         while True:
             try:
-                row = int(input("Please, select a row:  "))
-                col = int(input("Please, select column: "))
+                row = int(input("Please, select a row   : "))
+                col = int(input("Please, select a column: "))
                 break
             except ValueError:
                 print("\n\tOops!This is not a valid number.  Try again... /\n")
         return row, col
 
-    def run(self):
 
-        self.test()
+    def run(self):
+        self.mainDisplay()
+        self.board.printMatrix()
+        playing =True
+        while playing ==True:
+            index = self.askmove()
+            value = self.board.getmove(index[0], index[1])
+            self.board.printMatrix()
+            if value == '*':
+                self.gameOver()
+                playing = False
+
+
 
 
 
